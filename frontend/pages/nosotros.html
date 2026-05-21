@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nosotros – AioTec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <img src="/assets/logo.jpg" alt="AioTec">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/pages/productos.html">Productos</a></li>
+      <li><a href="/pages/nosotros.html" class="active">Nosotros</a></li>
+      <li><a href="/pages/contacto.html">Contacto</a></li>
+      <li><a href="/pages/dashboard.html">Panel</a></li>
+      <li><a href="/pages/login.html">Login</a></li>
+      <li><a href="/pages/registro.html">Registro</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="cart-btn" onclick="toggleCart()">🛒 <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <div class="nosotros-page">
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="nosotros-hero">
+      <div class="nosotros-hero-inner">
+        <img src="/assets/logo.jpg" alt="AioTec">
+        <div class="section-label">Nuestra historia</div>
+        <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem">
+          Somos <span>AioTec</span>
+        </h1>
+        <p class="section-sub" style="margin:0 auto">
+          Una empresa creada con pasión por la tecnología y el compromiso de brindar
+          soluciones reales a personas reales. Conoce quiénes somos y por qué hacemos lo que hacemos.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ HISTORIA ═══════ -->
+    <section class="historia-section">
+      <div class="historia-grid">
+        <div class="historia-content">
+          <div class="section-label">Historia</div>
+          <h2 class="section-title">Cómo <span>empezamos</span></h2>
+          <p class="section-sub" style="margin-bottom:0.5rem">
+            AioTec nació de la frustración de no encontrar un lugar confiable donde comprar tecnología
+            a buen precio y con soporte real. En 2022, un equipo apasionado por la innovación
+            decidió cambiar eso.
+          </p>
+
+          <div class="historia-timeline">
+            <div class="tl-item">
+              <div class="tl-dot">2022</div>
+              <div class="tl-text">
+                <h4>El inicio</h4>
+                <p>Fundamos AioTec con una pequeña tienda física y una visión grande: democratizar el acceso a la tecnología.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">2023</div>
+              <div class="tl-text">
+                <h4>Expansión digital</h4>
+                <p>Lanzamos nuestra tienda online y alcanzamos los primeros 1,000 clientes satisfechos en toda la región.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">2024</div>
+              <div class="tl-text">
+                <h4>Crecimiento consolidado</h4>
+                <p>Ampliamos nuestro catálogo a más de 200 productos y formamos alianzas con las marcas líderes del mercado.</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot">2025</div>
+              <div class="tl-text">
+                <h4>Hoy</h4>
+                <p>Más de 5,000 clientes confían en AioTec. Seguimos creciendo, mejorando y poniendo al cliente primero.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="historia-visual-card">
+          <span style="font-size:6rem;display:block;margin-bottom:1.5rem">🤖</span>
+          <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:0.5rem">El robot AioTec</h3>
+          <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.7">
+            Nuestro mascota representa nuestra esencia: tecnología con personalidad,
+            siempre disponible para ayudarte.
+          </p>
+          <div style="margin-top:2rem;display:flex;flex-direction:column;gap:0.75rem">
+            <div style="display:flex;justify-content:space-between;padding:0.75rem;background:var(--bg-secondary);border-radius:8px;border:1px solid var(--border)">
+              <span style="font-size:0.85rem;color:var(--text-secondary)">Clientes atendidos</span>
+              <span style="font-weight:800;color:var(--accent)">+5,000</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:0.75rem;background:var(--bg-secondary);border-radius:8px;border:1px solid var(--border)">
+              <span style="font-size:0.85rem;color:var(--text-secondary)">Productos en catálogo</span>
+              <span style="font-weight:800;color:var(--accent)">+200</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:0.75rem;background:var(--bg-secondary);border-radius:8px;border:1px solid var(--border)">
+              <span style="font-size:0.85rem;color:var(--text-secondary)">Años de experiencia</span>
+              <span style="font-weight:800;color:var(--accent)">3+</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;padding:0.75rem;background:var(--bg-secondary);border-radius:8px;border:1px solid var(--border)">
+              <span style="font-size:0.85rem;color:var(--text-secondary)">Satisfacción del cliente</span>
+              <span style="font-weight:800;color:var(--accent)">98%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ MISIÓN VISIÓN VALORES ═══════ -->
+    <section class="mv-section">
+      <div class="mv-inner">
+        <div style="text-align:center;margin-bottom:0.5rem">
+          <div class="section-label">Quiénes somos</div>
+          <h2 class="section-title">Misión, Visión <span>y Propósito</span></h2>
+        </div>
+        <div class="mv-grid">
+          <div class="mv-card">
+            <div class="mv-icon">🎯</div>
+            <h3>Nuestra Misión</h3>
+            <p>
+              Proveer a nuestros clientes tecnología de alta calidad con precios accesibles,
+              respaldada por un soporte técnico experto, una experiencia de compra excepcional
+              y relaciones a largo plazo basadas en la confianza y la transparencia.
+            </p>
+          </div>
+          <div class="mv-card">
+            <div class="mv-icon">🌟</div>
+            <h3>Nuestra Visión</h3>
+            <p>
+              Ser la tienda tecnológica de referencia en la región para el año 2027,
+              reconocida por la calidad de nuestros productos, la excelencia de nuestro
+              servicio y nuestra capacidad de innovar constantemente para satisfacer
+              las necesidades de cada cliente.
+            </p>
+          </div>
+          <div class="mv-card">
+            <div class="mv-icon">💡</div>
+            <h3>Nuestro Propósito</h3>
+            <p>
+              Acercar la tecnología a más personas. Creemos que todos merecen acceso
+              a herramientas digitales de calidad que mejoren su vida cotidiana,
+              su trabajo y su creatividad. Eso es lo que nos motiva cada día.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ VALORES ═══════ -->
+    <section class="valores-section">
+      <div class="valores-header">
+        <div class="section-label">Nuestros pilares</div>
+        <h2 class="section-title">Los valores que <span>nos guían</span></h2>
+        <p class="section-sub">Cada decisión que tomamos en AioTec está guiada por estos principios fundamentales.</p>
+      </div>
+      <div class="valores-grid">
+        <div class="valor-card">
+          <div class="valor-icon">🤝</div>
+          <h4>Honestidad</h4>
+          <p>Actuamos con transparencia total en precios, productos y procesos. Sin letras pequeñas, sin sorpresas.</p>
+        </div>
+        <div class="valor-card">
+          <div class="valor-icon">🚀</div>
+          <h4>Innovación</h4>
+          <p>Siempre buscamos las últimas tendencias tecnológicas para ofrecerte lo mejor del mercado.</p>
+        </div>
+        <div class="valor-card">
+          <div class="valor-icon">❤️</div>
+          <h4>Compromiso</h4>
+          <p>Tu satisfacción es nuestra prioridad. Nos comprometemos con cada cliente como si fuera el primero.</p>
+        </div>
+        <div class="valor-card">
+          <div class="valor-icon">⭐</div>
+          <h4>Excelencia</h4>
+          <p>Buscamos la perfección en cada detalle: desde el producto hasta el empaque y la postventa.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:4rem">
+        <a href="/pages/contacto.html" class="btn-primary">Contáctanos →</a>
+      </div>
+    </section>
+
+  </div><!-- /nosotros-page -->
+
+  <!-- Carrito -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header"><h3>🛒 Tu carrito</h3><button onclick="toggleCart()">✕</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart"><span class="empty-cart-icon">🛒</span>Tu carrito está vacío</div></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-num">$<span id="cartTotal">0.00</span></span></div>
+      <button class="btn-primary full-width" onclick="checkout()">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <p>© 2025 AioTec · All In One | Repara Conecta y Disfruta</p>
+    </div>
+  </footer>
+
+  <script src="/js/cart.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

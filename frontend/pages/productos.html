@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos – AioTec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <img src="/assets/logo.jpg" alt="AioTec">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/pages/productos.html" class="active">Productos</a></li>
+      <li><a href="/pages/nosotros.html">Nosotros</a></li>
+      <li><a href="/pages/contacto.html">Contacto</a></li>
+      <li><a href="/pages/dashboard.html">Panel</a></li>
+      <li><a href="/pages/login.html">Login</a></li>
+      <li><a href="/pages/registro.html">Registro</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="cart-btn" onclick="toggleCart()">🛒 <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <main class="products-page">
+    <div class="page-header">
+      <div>
+        <div class="section-label">Catálogo completo</div>
+        <h1>Nuestros <span>Productos</span></h1>
+      </div>
+      <div class="search-filter">
+        <input type="text" id="searchInput" placeholder="🔍 Buscar..." oninput="filtrarProductos()">
+        <select id="categoriaSelect" onchange="filtrarProductos()">
+          <option value="">Todas las categorías</option>
+          <option value="Laptops">Laptops</option>
+          <option value="Teléfonos">Teléfonos</option>
+          <option value="Audio">Audio</option>
+          <option value="Wearables">Wearables</option>
+          <option value="Monitores">Monitores</option>
+          <option value="Periféricos">Periféricos</option>
+          <option value="Tablets">Tablets</option>
+        </select>
+      </div>
+    </div>
+    <div class="productos-grid" id="productosGrid"></div>
+  </main>
+
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>🛒 Tu carrito</h3>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart"><span class="empty-cart-icon">🛒</span>Tu carrito está vacío</div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-num">$<span id="cartTotal">0.00</span></span></div>
+      <button class="btn-primary full-width" onclick="checkout()">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <p>© 2025 AioTec · All In One | Repara Conecta y Disfruta</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">📸</a>
+        <a href="#" class="social-btn">📘</a>
+        <a href="#" class="social-btn">💬</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/cart.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    let todosLosProductos = [];
+
+    async function initProductos() {
+      const grid = document.getElementById('productosGrid');
+      grid.innerHTML = '<div class="spinner"></div>';
+      try {
+        const res = await fetch('http://localhost:3000/api/productos');
+        todosLosProductos = res.ok ? await res.json() : productosEjemplo;
+      } catch {
+        todosLosProductos = productosEjemplo;
+      }
+      renderizarProductos(grid, todosLosProductos);
+      actualizarNavAuth();
+    }
+
+    function filtrarProductos() {
+      const texto    = document.getElementById('searchInput').value.toLowerCase();
+      const categoria = document.getElementById('categoriaSelect').value;
+      const filtrados = todosLosProductos.filter(p => {
+        const matchTexto = p.nombre.toLowerCase().includes(texto) || (p.descripcion||'').toLowerCase().includes(texto);
+        const matchCat   = !categoria || p.categoria === categoria;
+        return matchTexto && matchCat;
+      });
+      renderizarProductos(document.getElementById('productosGrid'), filtrados);
+    }
+
+    document.addEventListener('DOMContentLoaded', initProductos);
+  </script>
+</body>
+</html>

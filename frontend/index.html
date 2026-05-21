@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AioTec – All In One | Repara, Conecta y Disfruta</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════════ -->
+  <nav class="navbar">
+    <a href="index.html" class="nav-brand">
+      <img src="/assets/logo.jpg" alt="AioTec Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="/pages/productos.html">Productos</a></li>
+      <li><a href="/pages/nosotros.html">Nosotros</a></li>
+      <li><a href="/pages/contacto.html">Contacto</a></li>
+      <li><a href="/pages/dashboard.html">Panel</a></li>
+      <li><a href="/pages/login.html">Login</a></li>
+      <li><a href="/pages/registro.html">Registro</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="cart-btn" onclick="toggleCart()">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-grid-lines"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">🚀 All In One – Repara, Conecta y Disfruta</div>
+
+      <h1>Tu destino de<br><span>tecnología premium</span></h1>
+
+      <p class="hero-sub">
+        En AioTec encontrarás los mejores dispositivos y accesorios tecnológicos
+        con soporte experto, garantía total y envío rápido a todo el país.
+      </p>
+
+      <div class="hero-btns">
+        <a href="/pages/productos.html" class="btn-primary">Ver productos →</a>
+        <a href="/pages/nosotros.html" class="btn-outline">Conoce AioTec</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">5K<span>+</span></div>
+          <div class="stat-label">Clientes felices</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">200<span>+</span></div>
+          <div class="stat-label">Productos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3<span> años</span></div>
+          <div class="stat-label">En el mercado</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-logo-container">
+        <div class="hero-logo-glow"></div>
+        <div class="hero-logo-card">
+          <img src="/assets/logo.jpg" alt="AioTec">
+          <p class="hero-logo-tagline">All In One · Repara Conecta y Disfruta</p>
+        </div>
+
+        <div class="hero-floating-cards">
+          <div class="float-chip">
+            <span class="chip-dot"></span>
+            Envío express disponible
+          </div>
+          <div class="float-chip">
+            <span class="chip-dot"></span>
+            Garantía 12 meses
+          </div>
+          <div class="float-chip">
+            <span class="chip-dot"></span>
+            Soporte 24/7
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BARRA DE MARCAS
+  ═══════════════════════════════════════ -->
+  <div class="brands-bar">
+    <span class="brands-label">Trabajamos con</span>
+    <div class="brands-track">
+      <span class="brand-item">SAMSUNG</span>
+      <span class="brand-item">APPLE</span>
+      <span class="brand-item">XIAOMI</span>
+      <span class="brand-item">SONY</span>
+      <span class="brand-item">LG</span>
+      <span class="brand-item">LENOVO</span>
+      <span class="brand-item">HP</span>
+      <span class="brand-item">LOGITECH</span>
+      <!-- Duplicado para el efecto marquee infinito -->
+      <span class="brand-item">SAMSUNG</span>
+      <span class="brand-item">APPLE</span>
+      <span class="brand-item">XIAOMI</span>
+      <span class="brand-item">SONY</span>
+      <span class="brand-item">LG</span>
+      <span class="brand-item">LENOVO</span>
+      <span class="brand-item">HP</span>
+      <span class="brand-item">LOGITECH</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       POR QUÉ ELEGIRNOS
+  ═══════════════════════════════════════ -->
+  <section class="features">
+    <div class="features-inner">
+      <div class="features-header">
+        <div>
+          <div class="section-label">¿Por qué AioTec?</div>
+          <h2 class="section-title">Lo que nos hace <span>diferentes</span></h2>
+        </div>
+        <p class="section-sub" style="max-width:380px">
+          Más que una tienda — somos tu aliado tecnológico de confianza.
+        </p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feat-icon">⚡</div>
+          <h3>Envío Ultra Rápido</h3>
+          <p>Recibe tu pedido en 24–48 horas. Sin excusas, sin demoras.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🔒</div>
+          <h3>Pago 100% Seguro</h3>
+          <p>Cifrado bancario de extremo a extremo. Tus datos siempre protegidos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🛡️</div>
+          <h3>Garantía Total</h3>
+          <p>12 meses de garantía en todos los productos. Respaldamos cada compra.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feat-icon">🤖</div>
+          <h3>Soporte Experto 24/7</h3>
+          <p>Nuestro equipo técnico está disponible todos los días del año.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PRODUCTOS DESTACADOS
+  ═══════════════════════════════════════ -->
+  <section class="destacados">
+    <div class="destacados-inner">
+      <div class="destacados-header">
+        <div>
+          <div class="section-label">Catálogo</div>
+          <h2 class="section-title">Productos <span>Destacados</span></h2>
+        </div>
+        <a href="/pages/productos.html" class="btn-ghost">Ver todos los productos →</a>
+      </div>
+      <div class="productos-grid" id="productosDestacados">
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SOBRE NOSOTROS (RESUMEN)
+  ═══════════════════════════════════════ -->
+  <section class="about-preview">
+    <div class="about-preview-inner">
+      <div class="about-visual">
+        <div class="about-robot-card">
+          <span class="robot-emoji">🤖</span>
+          <p class="robot-card-label">El equipo AioTec</p>
+        </div>
+        <div class="about-stat-cards">
+          <div class="about-mini-stat">
+            <span class="mini-stat-num">+5K</span>
+            <div class="mini-stat-text">Clientes<br>satisfechos</div>
+          </div>
+          <div class="about-mini-stat">
+            <span class="mini-stat-num">3 años</span>
+            <div class="mini-stat-text">De experiencia<br>en el mercado</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-label">Sobre nosotros</div>
+        <h2 class="section-title">Tecnología con <span>propósito</span></h2>
+        <p class="section-sub">
+          AioTec nació con una misión clara: acercar la tecnología de calidad a
+          todos, con honestidad, servicio de primer nivel y precios justos.
+          Somos el lugar donde la innovación y la confianza se encuentran.
+        </p>
+
+        <div class="value-list">
+          <div class="value-item">
+            <div class="value-icon">🎯</div>
+            <div class="value-text">
+              <h4>Nuestra Misión</h4>
+              <p>Proveer tecnología accesible con soporte experto y experiencia de compra excepcional.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">🌟</div>
+            <div class="value-text">
+              <h4>Nuestra Visión</h4>
+              <p>Ser la tienda tecnológica de referencia en la región, conocida por calidad y confianza.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-icon">💡</div>
+            <div class="value-text">
+              <h4>Nuestros Valores</h4>
+              <p>Honestidad, innovación, compromiso y servicio al cliente como pilares fundamentales.</p>
+            </div>
+          </div>
+        </div>
+        <a href="/pages/nosotros.html" class="btn-primary">Conocer más →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIOS
+  ═══════════════════════════════════════ -->
+  <section class="testimonios">
+    <div class="testimonios-inner">
+      <div class="testimonios-header">
+        <div class="section-label">Lo que dicen</div>
+        <h2 class="section-title">Opiniones de <span>nuestros clientes</span></h2>
+        <p class="section-sub">Más de 5,000 clientes satisfechos respaldan nuestra calidad.</p>
+      </div>
+      <div class="testimonios-grid">
+        <div class="test-card">
+          <div class="test-stars">⭐⭐⭐⭐⭐</div>
+          <p class="test-text">"Compré una laptop y llegó perfectamente embalada y en tiempo récord. El soporte post-venta es increíble, me ayudaron a configurarla desde cero."</p>
+          <div class="test-author">
+            <div class="test-avatar">👨</div>
+            <div>
+              <div class="test-name">Carlos M.</div>
+              <div class="test-role">Cliente desde 2022</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="test-stars">⭐⭐⭐⭐⭐</div>
+          <p class="test-text">"Llevo 2 años comprando en AioTec y nunca me han fallado. Los productos son originales y si hay algún problema, lo resuelven al instante."</p>
+          <div class="test-author">
+            <div class="test-avatar">👩</div>
+            <div>
+              <div class="test-name">Valeria R.</div>
+              <div class="test-role">Cliente frecuente</div>
+            </div>
+          </div>
+        </div>
+        <div class="test-card">
+          <div class="test-stars">⭐⭐⭐⭐⭐</div>
+          <p class="test-text">"El mejor precio del mercado y la atención es espectacular. Recomendé AioTec a todos mis amigos y todos quedaron satisfechos."</p>
+          <div class="test-author">
+            <div class="test-avatar">🧑</div>
+            <div>
+              <div class="test-name">Diego P.</div>
+              <div class="test-role">Cliente desde 2023</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CTA BANNER
+  ═══════════════════════════════════════ -->
+  <section class="cta-banner">
+    <div class="cta-banner-inner">
+      <div class="section-label">¿Listo para comenzar?</div>
+      <h2>Únete a la familia <span>AioTec</span></h2>
+      <p>Crea tu cuenta gratis y accede a ofertas exclusivas, seguimiento de pedidos y soporte personalizado.</p>
+      <div class="cta-btns">
+        <a href="/pages/registro.html" class="btn-primary">Crear cuenta gratis</a>
+        <a href="/pages/contacto.html" class="btn-outline">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CARRITO LATERAL
+  ═══════════════════════════════════════ -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>🛒 Tu carrito</h3>
+      <button onclick="toggleCart()">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <span class="empty-cart-icon">🛒</span>
+        Tu carrito está vacío
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-num">$<span id="cartTotal">0.00</span></span>
+      </div>
+      <button class="btn-primary full-width" onclick="checkout()">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="/assets/logo.jpg" alt="AioTec">
+        <p>Tecnología de calidad con soporte experto.<br>Repara, conecta y disfruta con AioTec.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="/pages/productos.html">Productos</a></li>
+          <li><a href="/pages/nosotros.html">Nosotros</a></li>
+          <li><a href="/pages/contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Cuenta</h4>
+        <ul>
+          <li><a href="/pages/login.html">Iniciar sesión</a></li>
+          <li><a href="/pages/registro.html">Registrarse</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AioTec. Todos los derechos reservados. | All In One · Repara Conecta y Disfruta</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" title="Instagram">📸</a>
+        <a href="#" class="social-btn" title="Facebook">📘</a>
+        <a href="#" class="social-btn" title="WhatsApp">💬</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/cart.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      cargarProductos(document.getElementById('productosDestacados'), 4);
+      actualizarNavAuth();
+    });
+  </script>
+</body>
+</html>

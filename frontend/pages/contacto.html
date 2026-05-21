@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contacto – AioTec</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="/" class="nav-brand">
+      <img src="/assets/logo.jpg" alt="AioTec">
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/pages/productos.html">Productos</a></li>
+      <li><a href="/pages/nosotros.html">Nosotros</a></li>
+      <li><a href="/pages/contacto.html" class="active">Contacto</a></li>
+      <li><a href="/pages/dashboard.html">Panel</a></li>
+      <li><a href="/pages/login.html">Login</a></li>
+      <li><a href="/pages/registro.html">Registro</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="cart-btn" onclick="toggleCart()">🛒 <span class="cart-count" id="cartCount">0</span></button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </nav>
+
+  <div class="contacto-page">
+
+    <!-- ═══════ HERO ═══════ -->
+    <section class="contacto-hero">
+      <div class="contacto-hero-inner">
+        <img src="/assets/logo.jpg" alt="AioTec">
+        <div class="section-label">Estamos aquí para ti</div>
+        <h1 class="section-title" style="font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem">
+          Hablemos <span>hoy mismo</span>
+        </h1>
+        <p class="section-sub" style="margin:0 auto">
+          ¿Tienes una pregunta, necesitas soporte técnico o quieres hacer un pedido especial?
+          Nuestro equipo está disponible para ayudarte.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ MAIN CONTACTO ═══════ -->
+    <div class="contacto-main">
+
+      <!-- INFO COLUMNA -->
+      <div class="contacto-info">
+        <div class="section-label">Información</div>
+        <h2 class="section-title" style="font-size:1.75rem;margin-bottom:0.5rem">
+          Encuéntranos
+        </h2>
+        <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:0.5rem;line-height:1.7">
+          Estamos disponibles a través de múltiples canales para brindarte la mejor atención posible.
+        </p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="info-card-icon">📍</div>
+            <div class="info-card-text">
+              <h4>Dirección</h4>
+              <p>Ambato, Tungurahua, Ecuador</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📞</div>
+            <div class="info-card-text">
+              <h4>Teléfono</h4>
+              <p>+593 99 123 4567</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📧</div>
+            <div class="info-card-text">
+              <h4>Correo</h4>
+              <p>info@aiotec.ec</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">🕐</div>
+            <div class="info-card-text">
+              <h4>Horario de atención</h4>
+              <p>Lun–Sáb 9:00 – 19:00</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTÓN WHATSAPP -->
+        <a
+          href="https://wa.me/593991234567?text=Hola%20AioTec!%20Necesito%20información%20sobre%20sus%20productos."
+          target="_blank"
+          rel="noopener"
+          class="wa-btn"
+        >
+          <span class="wa-icon">💬</span>
+          Chatear por WhatsApp
+        </a>
+
+        <div style="margin-top:2rem;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius)">
+          <h4 style="font-size:0.85rem;font-weight:700;margin-bottom:0.5rem">⚡ Soporte rápido</h4>
+          <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.6">
+            Para soporte técnico urgente, contáctanos vía WhatsApp. Respondemos en menos de 2 horas en horario de atención.
+          </p>
+        </div>
+      </div>
+
+      <!-- FORMULARIO COLUMNA -->
+      <div class="contacto-form-card">
+        <h3>Envíanos un mensaje</h3>
+        <p class="form-sub">Completa el formulario y te responderemos lo antes posible.</p>
+
+        <div class="alert success" id="alertSuccess">✅ ¡Mensaje enviado! Nos pondremos en contacto contigo pronto.</div>
+        <div class="alert error"   id="alertError">❌ Hubo un error. Por favor, intenta nuevamente.</div>
+
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" placeholder="Tu nombre" autocomplete="name">
+          <span class="field-error" id="errNombre">Por favor ingresa tu nombre</span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" placeholder="tu@correo.com" autocomplete="email">
+          <span class="field-error" id="errEmail">Por favor ingresa un correo válido</span>
+        </div>
+
+        <div class="form-group">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" placeholder="¿En qué podemos ayudarte?">
+          <span class="field-error" id="errAsunto">Por favor ingresa el asunto</span>
+        </div>
+
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" placeholder="Cuéntanos más sobre tu consulta..."></textarea>
+          <span class="field-error" id="errMensaje">Por favor escribe tu mensaje</span>
+        </div>
+
+        <button class="btn-primary full-width" id="submitBtn" onclick="enviarFormulario()">
+          Enviar mensaje →
+        </button>
+      </div>
+    </div>
+
+  </div><!-- /contacto-page -->
+
+  <!-- Carrito -->
+  <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header"><h3>🛒 Tu carrito</h3><button onclick="toggleCart()">✕</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart"><span class="empty-cart-icon">🛒</span>Tu carrito está vacío</div></div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total</span><span class="cart-total-num">$<span id="cartTotal">0.00</span></span></div>
+      <button class="btn-primary full-width" onclick="checkout()">Finalizar compra</button>
+    </div>
+  </aside>
+
+  <footer class="footer">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <p>© 2025 AioTec · All In One | Repara Conecta y Disfruta</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn">📸</a>
+        <a href="#" class="social-btn">📘</a>
+        <a
+          href="https://wa.me/593991234567"
+          target="_blank"
+          class="social-btn"
+        >💬</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/cart.js"></script>
+  <script src="/js/main.js"></script>
+  <script>
+    function validarCampo(id, errId, condicion) {
+      const input = document.getElementById(id);
+      const err   = document.getElementById(errId);
+      if (!condicion(input.value)) {
+        input.classList.add('input-error');
+        err.classList.add('show');
+        return false;
+      }
+      input.classList.remove('input-error');
+      err.classList.remove('show');
+      return true;
+    }
+
+    async function enviarFormulario() {
+      // Limpiar alertas
+      document.getElementById('alertSuccess').classList.remove('show');
+      document.getElementById('alertError').classList.remove('show');
+
+      const valido = [
+        validarCampo('nombre',  'errNombre',  v => v.trim().length >= 2),
+        validarCampo('email',   'errEmail',   v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)),
+        validarCampo('asunto',  'errAsunto',  v => v.trim().length >= 3),
+        validarCampo('mensaje', 'errMensaje', v => v.trim().length >= 10),
+      ].every(Boolean);
+
+      if (!valido) return;
+
+      const btn = document.getElementById('submitBtn');
+      btn.textContent = 'Enviando...';
+      btn.disabled = true;
+
+      // Aquí podrías hacer fetch a tu backend para guardar el mensaje
+      // Por ahora simulamos el envío
+      await new Promise(r => setTimeout(r, 1200));
+
+      document.getElementById('alertSuccess').classList.add('show');
+      btn.textContent = 'Enviar mensaje →';
+      btn.disabled = false;
+
+      // Limpiar formulario
+      ['nombre','email','asunto','mensaje'].forEach(id => {
+        document.getElementById(id).value = '';
+      });
+    }
+  </script>
+</body>
+</html>
